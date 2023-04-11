@@ -1,0 +1,43 @@
+
+<div class="container">
+    
+    <div class="main">
+        
+     <div class="side">
+        <h3 style="text-decoration: underline; margin-bottom: 30%;">Customer Login Page</h3>
+        <p>
+            <a routerLink="/cust-registration">New User ? Register Here</a>
+           </p>
+          <div class="social-icons">
+            <p style="text-align:center;"><b>Sign-in-using</b></p>
+               <ul>
+                   <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                   <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                   <li><a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                   <li><a href="https://accounts.google.com/"><i class="fa-brands fa-google-plus-g"></i></a></li>
+               </ul>
+          </div> </div>
+     <div class="sign-in">
+     <img src="assets/images/logo.jpg" width="55%" alt="login">
+     <form class="sign-in-form">
+     <div class="form-group">
+         <i class="fa-solid fa-user"></i>
+         <input type="email" class="form-control" pattern= "[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" placeholder="Email" required>
+     </div>
+    <div class="form-group">
+         <i class="fa-solid fa-key"></i>
+       <input type="password" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" placeholder="Password" title="Password should contain 1 uppercase,1 lowercase,1 special character,1 number" required>
+    </div>
+    <br>
+    <div class="buttons">
+       <input type="submit" class="btnLogin" value="Submit">
+    </div>
+    <br>
+     </form>
+     <p class="forgot-link">
+         <a routerLink="/forgotpass">Forgot your password ?</a>
+     </p>
+     
+    </div>
+    </div>
+    </div>

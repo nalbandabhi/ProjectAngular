@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form #userform="ngForm" (ngSubmit)= "onSubmit(userform)">
+                <div class="mt-2">
+                    <input type="text" #firstname= "ngModel" name="FirstName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.firstname" placeholder="First Name">
+                    <div class="text-danger" *ngIf= "firstname.dirty && firstname.errors?.['required']">
+                        FirstName is required
+                    </div>
+                    <div class="text-danger" *ngIf= "firstname.dirty && firstname.errors?.['pattern']">
+                        Only Alphabet is required
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <input type="text" #lastname= "ngModel" name="LastName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.lastname" placeholder="Last Name">
+                    <div class="text-danger" *ngIf= "lastname.dirty && lastname.errors">
+                        last Name is Required
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <input type="text" #email= "ngModel" name="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required class="form-control" [(ngModel)]="user.email" placeholder="Email">
+                    <div class="text-danger" *ngIf= "email.dirty && email.errors">
+                        Email is Required
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <input type="text" #city= "ngModel" name="city" pattern="[a-zA-Z]{1,20}" required class="form-control" [(ngModel)]="user.city" placeholder="City">
+                    <div class="text-danger" *ngIf= "city.dirty && city.errors">
+                        City is Required
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <input type="text" #phone= "ngModel" name="phone" pattern="[0-9]{10}" required class="form-control" [(ngModel)]="user.phone" placeholder="Phone">
+                    <div class="text-danger" *ngIf= "phone.dirty && phone.errors">
+                        Phone is Required
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <input type="password" #password= "ngModel" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required class="form-control" [(ngModel)]="user.password" title="Password should contain 1 special character,1 number,1 uppercase,1 lowercase" placeholder="Password">
+                    <div class="text-danger" *ngIf= "password.dirty && password.errors?.['required']">
+                        Password is required
+                    </div>
+                    <div class="text-danger" *ngIf= "password.dirty && password.errors?.['pattern']">
+                        Password should contain 1 special character,1 number,1 uppercase,1 lowercase
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button class="btn-secondary">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

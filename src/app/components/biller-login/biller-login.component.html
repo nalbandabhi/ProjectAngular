@@ -1,0 +1,71 @@
+<!-- <div class="container">
+    <div class="main">
+        <div class="side">
+            <h1 style="color:black"><b>Biller Login</b></h1>
+        </div>
+        <div class="sign-in">
+            <img src="/assets/images/login.svg" width="45%" alt="login"><br>
+            <form class="sign-in-form">
+                <div class="form-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" class="form-control" placeholder="Enter Biller ID" required pattern="\d.{3,}">
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" class="form-control" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$"
+                        placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" class="form-control"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$"
+                        placeholder="Password" required
+                        title="Password should contain 1 special character,1 number,1 uppercase,1 lowercase">
+                </div>
+                <button class="btnLogIn">Login</button>
+
+                <p style="margin-right: 70%;">Not an Admin?</p><a href="file:///E:/DXC/Java%20Notes/Assesment/login.html#" style="border-bottom: 10px; color: aliceblue; margin-right: 70%;">Login Page</a><a href="loginpage.html"></a>-->
+                <!-- <h4>Not a Biller?&nbsp;
+                    <p style="background-color: rgb(186, 186, 210);">Customer Login</p></h4>
+                
+
+            </form>
+            <p class="forgot-link">
+                <a href="forgotpass.html" style="color: aliceblue;">Forgot password ?</a>
+            </p>
+        </div>
+    </div>
+</div> 
+  -->
+  <div class="container">
+    <div class="main">
+        <div class="side">
+            <h3 style="color:black"><b>Biller Login</b></h3>
+        </div>
+    <div class="sign-in">
+            <img src="/assets/images/login.svg" width="35%" alt="login"><br>
+            <form class="sign-in-form">
+                <div class="form-group">
+                    <i class="fa-sharp fa-regular fa-key"></i>
+                    <input type="text" class="form-control" placeholder="Enter Biller ID" required pattern="\d.{3,}" >
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" class="form-control" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" placeholder="Email" required >
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" class="form-control" pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,16}$" placeholder="Password" required title="Password should contain 1 special character,1 number,1 uppercase,1 lowercase">
+                </div>
+            <button class="btnLogIn">Login</button><br>
+            <div style="display: flex;">
+            <p>Not a Biller ?&nbsp;&nbsp;</p><a routerLink="/cust-login"><p style="background-color: rgb(186, 186, 210);"><b>Customer - Login</b></p></a>
+            </div>
+            </form>
+            <p class="forgot-link">
+                <a routerLink="/forgotpass" style="color: aliceblue;">Forgot password ?</a>
+            </p>
+        </div>
+    </div>
+  </div>
+  

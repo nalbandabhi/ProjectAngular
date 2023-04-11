@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor= "let u of users ">
+            <div class="card">
+                
+                <div class="card-body">
+                  <span class="text-danger float-end" (click)= "onDelete(u.id)"><i class="fa-solid fa-trash-alt fa-lag"></i></span>
+                  <h5 class="card-title">{{u.firstname}} {{u.lastname}}</h5>
+                  <p class="card-text">{{u.email}}</p>
+                  <p class="card-text">{{u.city}}</p>
+                  <p class="card-text">{{u.phone}}</p>
+                  <p class="card-text">{{u.password}}</p>
+
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+
+* {
+    box-sizing: border-box;
+  }
+  .container{
+    margin-top: 1px;
+    text-align: center;
+    justify-content: center;
+    background: url("/assets/images/back1.jpg") no-repeat center center fixed; 
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    filter: blur(.1px);
+    width: 100%;
+    height: 100hv;
+    height: auto;
+    top: 0;
+    left: 0;
+    box-shadow:0px 10px 20px 1px rgb(134, 134, 134);
+    margin-bottom: 4%;
+  }
+
+  .container sign{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width:100%;
+      
+  }
+  label{
+    display:block;
+    height: 10px;
+  }
+  
+  input[type=text], input[type=password]{
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 20%;
+    padding: 10px;
+    margin:8px 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow:0 10px 20px 4px rgba(222, 38, 38, 0.06);
+    background-color:rgb(232, 203, 203);
+  }
+  input[type=text]:focus, input[type=password]:focus {
+    background-color:bisque;
+    outline: none;
+  }
+  
+  hr {
+    border: 1px solid wheat;
+    margin-bottom: 25px;
+  }
+  
+  button {
+    background-color: #e42942a5;
+    color: white;
+    padding: 14px 20px;
+    margin: 5px 0px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  
+  .radiobut{
+    display: inline-flex;
+    padding: 15px 35px;
+    margin: 5px 0px;
+    background-color:rgb(232, 203, 203);
+    
+    border-radius: 10px;
+    border: 1px solid burlywood;
+    
+  }
+ 
+
+  input[type=email]{
+  display: inline-block;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 20%;
+    padding: 10px;
+    margin:8px 0;
+    margin-top:0px;
+    border: none;
+    border-radius: 10px;
+    box-shadow:0 10px 20px 4px rgba(222, 38, 38, 0.06);
+    background-color:rgb(232, 203, 203);
+  }

@@ -1,0 +1,43 @@
+
+<form>
+    <div class="container">
+
+        <h1>Biller-Registration Form</h1>
+        <p><b>Please fill in this form to create an account.</b></p>
+       
+        <div class="sign">
+
+        <label for="name"><b>Full Name</b></label><br>
+        <input type="text"  name="First Name" pattern="^[A-Za-z]{4,10}$" required title="Only Alphabets">
+        <br>
+        <b>Choose your gender : </b><br>
+        <div class="radiobut">
+          
+            <label for="male"><b>Male</b></label>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="female"><b>&nbsp;Female</b></label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="Other"><b>&nbsp;Other</b></label>
+            <input type="radio" name="gender" id="Other" value="Other">
+        
+        </div>
+        <br>
+        <label for="Phone"><b>Phone number</b></label><br>
+        <input type="text" placeholder="+91" title="Only Numbers"name="Phone No" pattern="[0-9]{10}" required>
+        <br>
+        <label for="email"><b>Email</b></label><br>
+        <input type="email" name="email" pattern="^[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required>
+        <br>
+        <label for="psw"><b>Password</b></label><br>
+        <input type="password" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" title="Password should contain 1 uppercase,1 lowercase,1 special character,1 number" required>
+        <br>
+        <label for="psw-repeat"><b>Repeat Password</b></label><br>
+        <input type="password" name="psw-repeat" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required>
+        <br>
+        <p>By creating an account you agree to our <a href="#" style="color:rgb(14, 14, 12)"><b>Terms & Privacy</b></a>.</p>
+          
+          <button type="submit" class="signupbtn">Submit</button>
+        
+        </div>
+      </div>
+    </form>
