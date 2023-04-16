@@ -1,0 +1,31 @@
+{
+  "customer": [
+    {
+      "firstname": "Movva",
+      "lastname": "Praneeth",
+      "email": "movva.praneeth82@gmail.com",
+      "city": "Bangalore",
+      "phone": "8179820477",
+      "password": "asdASD12!@",
+      "id": 3
+    },
+    {
+      "firstname": "ABHINAY",
+      "lastname": "NALBAND",
+      "email": "nalbandabhinaykumar@gmail.com",
+      "city": "HYDERABAD",
+      "phone": "8096389857",
+      "password": "Abhinay@1",
+      "id": 4
+    },
+    {
+      "firstname": "Akhil",
+      "lastname": "Akkeneni",
+      "email": "n.abhinaychary@gmail.com",
+      "city": "HYDERABAD",
+      "phone": "8093421235",
+      "password": "Abhinay@1",
+      "id": 5
+    }
+  ]
+}

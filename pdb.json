@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "AccountNumber": "12237489",
+      "PaymentAmount": 12000,
+      "PaymentMethod": "Bill recharge",
+      "Description": "recharge",
+      "id": 1
+    }
+  ]
+}

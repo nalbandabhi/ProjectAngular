@@ -1,13 +1,13 @@
 <div class="container">
     <div class="main">
-        <h2 style="background-color: rgb(235, 235, 176) ;text-align: center;margin-top:.1%;">Biller-Registration Form</h2><br>
-            <p><b><h4 style="background-color: bisque;">Please fill in this form to create an account.</h4></b></p><br>
+    <h2 style="background-color: rgb(235, 235, 176) ;text-align: center;margin-top:.1%;">Customer-Registration Form</h2><br>
+        <p><b><h4 style="background-color: bisque;">Please fill in this form to create an account.</h4></b></p><br>
     <div class="row">
         <div class="col-md-4 offset-md-4">
-            <form #userform="ngForm" (ngSubmit)= "onSubmit(userform)">
+            <form #customerform="ngForm" (ngSubmit)= "onSubmit(customerform)">
                 <div class="mt-2">
                     <i class="fa-solid fa-user"></i>&nbsp;&nbsp;
-                    <input type="text" #firstname= "ngModel" name="FirstName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.firstname" placeholder="First Name">
+                    <input type="text" #firstname= "ngModel" name="FirstName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="customer.firstname" placeholder="First Name">
                     <div class="text-danger" *ngIf= "firstname.dirty && firstname.errors?.['required']">
                         FirstName is required
                     </div>
@@ -17,35 +17,35 @@
                 </div>
                 <div class="mt-2">
                     <i class="fa-solid fa-user"></i>&nbsp;&nbsp;
-                    <input type="text" #lastname= "ngModel" name="LastName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.lastname" placeholder="Last Name">
+                    <input type="text" #lastname= "ngModel" name="LastName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="customer.lastname" placeholder="Last Name">
                     <div class="text-danger" *ngIf= "lastname.dirty && lastname.errors">
                         last Name is Required
                     </div>
                 </div>
                 <div class="mt-2">
                     <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;
-                    <input type="text" #email= "ngModel" name="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required class="form-control" [(ngModel)]="user.email" placeholder="Email">
+                    <input type="text" #email= "ngModel" name="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required class="form-control" [(ngModel)]="customer.email" placeholder="Email">
                     <div class="text-danger" *ngIf= "email.dirty && email.errors">
                         Email is Required
                     </div>
                 </div>
                 <div class="mt-2">
                     <i class="fa-solid fa-city"></i>&nbsp;&nbsp;
-                    <input type="text" #city= "ngModel" name="city" pattern="[a-zA-Z]{1,20}" required class="form-control" [(ngModel)]="user.city" placeholder="City">
+                    <input type="text" #city= "ngModel" name="city" pattern="[a-zA-Z]{1,20}" required class="form-control" [(ngModel)]="customer.city" placeholder="City">
                     <div class="text-danger" *ngIf= "city.dirty && city.errors">
                         City is Required
                     </div>
                 </div>
                 <div class="mt-2">
                     <i class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;
-                    <input type="text" #phone= "ngModel" name="phone" pattern="[0-9]{10}" required class="form-control" [(ngModel)]="user.phone" placeholder="Phone">
+                    <input type="text" #phone= "ngModel" name="phone" pattern="[0-9]{10}" required class="form-control" [(ngModel)]="customer.phone" placeholder="Phone">
                     <div class="text-danger" *ngIf= "phone.dirty && phone.errors">
                         Phone is Required
                     </div>
                 </div>
                 <div class="mt-2">
                     <i class="fa-solid fa-key"></i>&nbsp;&nbsp;
-                    <input type="password" #password= "ngModel" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required class="form-control" [(ngModel)]="user.password" title="Password should contain 1 special character,1 number,1 uppercase,1 lowercase" placeholder="Password">
+                    <input type="password" #password= "ngModel" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required class="form-control" [(ngModel)]="customer.password" title="Password should contain 1 special character,1 number,1 uppercase,1 lowercase" placeholder="Password">
                     <div class="text-danger" *ngIf= "password.dirty && password.errors?.['required']">
                         Password is required
                     </div>
@@ -61,4 +61,5 @@
             </form>
         </div>
     </div>
+</div>
 </div>

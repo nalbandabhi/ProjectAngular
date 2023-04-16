@@ -1,0 +1,57 @@
+<!-- 
+<div class="container">
+    <h1 style="text-align: center;">Bill Payment</h1>
+    <form #payform="ngForm" (ngSubmit)="onSubmitForm(payform)">
+      <div class="form-group">
+        <label for="account">Account Number:</label>
+        <input type="text" id="account" class="form-control" #accountNo= "ngModel" name="account"   required />
+      </div>
+      <div class="form-group">
+        <label for="amount">Payment Amount:</label>
+        <input type="number" id="amount" class="form-control" #paymentAmount="ngModel" name="amount" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="method">Payment Method:</label>
+        <select id="method" #paymentMethod="ngModel"  class="form-control" name="method" required>
+          <option value="">Select payment bills</option>
+          <option value="string">Recharge bill</option>
+          <option value="string">Water bill</option>
+          <option value="string">Elactricity bill</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="account">Description:</label>
+        <input type="text" id="account" class="form-control" #description="ngModel" name="account" [(ngModel)]="pay.account" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Payment</button>
+    </form>
+  </div> -->
+
+  <button type="submit" id="b2" class="btn btn-info" style="margin-top: 1%;margin-left: 85%;" (click)="onBtnClick()">Payments History</button>
+  <button type="submit"  class="btn btn-info" style="margin-top: 1%;margin-left: 85%;" (click)="onBtClick()">Customer Home</button>
+
+  <h3 style="text-align: center;">Payments Page</h3>
+  <div  class="container">
+    
+  <form [formGroup]="addPayment" (ngSubmit)="Savedata()">
+    <div class="mb-3">
+      <label  class="form-label">Account Number</label>
+      <input type="text" class="form-control" formControlName="AccountNumber" >
+      
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Payment Amount</label>
+      <input type="number" class="form-control" formControlName="PaymentAmount" >
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Payment Method</label>
+        <input type="text" class="form-control" formControlName="PaymentMethod">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Description</label>
+        <input type="text" class="form-control" formControlName="Description">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

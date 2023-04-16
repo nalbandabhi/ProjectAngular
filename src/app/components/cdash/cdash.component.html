@@ -1,0 +1,19 @@
+<button type="submit" id="b1" class="btn btn-danger" style="margin-top: .1%;margin-left: 90%;margin-bottom: 2%;" (click)="onlogClick()">Logout</button>
+<!-- <button type="submit"  class="btn btn-outline-info" style="margin-top: .1%;margin-left: 85%;margin-bottom: 2%;" (click)="onreClick()">Accepted Transactions</button> -->
+
+<div class="container">
+<div style="display: flex; justify-content: center; align-items: center; height: 50vh;margin-top: 10%;margin-bottom: 0%;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      
+      <div style="box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1); padding: 100px; margin-bottom: 200px; width: fit-content;">
+        <h3 style="text-align: center;color: #008CBA;">Welcome</h3>
+        <h4 style="margin-bottom: 30px;">Please choose Below</h4>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <button (click)="goToPayments()" style="background-color: #4CAF50; color: white; border-radius: 8px; padding: 14px 20px; border: none; cursor: pointer;">Payments</button>
+          <br /><br>
+          <button (click)="goToTransactions()" style="background-color: #008CBA; color: white; border-radius: 8px; padding: 14px 20px; border: none; cursor: pointer;">Transactions</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

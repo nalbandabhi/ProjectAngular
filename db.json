@@ -1,20 +1,31 @@
 {
   "user": [
     {
-      "firstname": "Praneeth",
-      "lastname": "Movva",
+      "firstname": "Movva",
+      "lastname": "Praneeth",
       "email": "movva.praneeth82@gmail.com",
-      "city": "Ongole",
-      "phone": "08179820477",
-      "id": 1
+      "city": "Bangalore",
+      "phone": "8179820477",
+      "password": "asdASD12!",
+      "id": 3
     },
     {
       "firstname": "ankit",
-      "lastname": "Snyder",
-      "email": "ac.@gmail.com",
-      "city": "wano",
-      "phone": "12312423123",
-      "id": 2
+      "lastname": "snyder",
+      "email": "as@gmail.com",
+      "city": "bangalore",
+      "phone": "1234567879",
+      "password": "aewAEW12!",
+      "id": 4
+    },
+    {
+      "firstname": "Abhi",
+      "lastname": "nalband",
+      "email": "Abhinay@abhi",
+      "city": "hyderabad",
+      "phone": "8096389857",
+      "password": "Abhinaykumar@1",
+      "id": 5
     }
   ]
 }

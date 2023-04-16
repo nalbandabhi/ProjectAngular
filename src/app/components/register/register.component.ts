@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserserviceService } from 'src/app/services/userservice.service';
 import { User } from '../models/user';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private service: UserserviceService, private router:Router){}
+  constructor(private formBuilder : FormBuilder,private service: UserserviceService, private router:Router){}
 
   public user=new User;
 
@@ -23,8 +23,8 @@ export class RegisterComponent implements OnInit {
     if(form.valid){
       this.service.addUser(this.user).subscribe(data=>{
         //console.log(data);
-        //alert('Contact created successfully')
-        this.router.navigateByUrl('/');
+        alert('Registered successfully')
+        this.router.navigateByUrl('/blogin');
       })    
     } else{
       alert("Please fix the error");

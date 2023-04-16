@@ -1,0 +1,40 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor= "let c of posts ">
+            <div class="card">
+                
+                <div class="card-body">
+                  <span class="text-danger float-end" (click)= "onDelete(c.id)"><i class="fa-solid fa-trash-alt fa-lag"></i></span>
+                  <h5 class="card-title">{{c.firstname}}</h5>
+                  <p class="card-text">{{c.email}}</p>
+                  <p class="card-text">{{c.city}}</p>
+                  <p class="card-text">{{c.phone}}</p>
+                  
+
+                </div>
+              </div>
+        </div>
+    </div>
+</div> -->
+<button type="submit" id="b2" class="btn btn-info" style="margin-top: 1%;margin-left: 80%;" (click)="onBtnClick()">Payments Page</button>
+
+<h3 style="text-align: center;margin-bottom: 1%;">Payment List</h3>
+
+<div class="container">
+<table class="table table-bordered">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">SNO</th>
+      <th scope="col">Payment Method</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of paymentdata">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.PaymentMethod}}</td>
+      <td><span (click)="navi(item.id)">Receipt <i class="fa-sharp fa-solid fa-receipt"></i></span></td>
+    </tr>
+  </tbody>
+</table>
+</div>

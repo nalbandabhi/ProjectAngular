@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Customer-Login</h1>
+                    <h5>Please Enter Email and Password !!</h5>
+                </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input formControlName="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" >"Email Id is Required</span>
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required type="password" class="form-control" id="exampleInputPassword1" title="Password should contain atleast 1 special character,1 number,1 uppercase,1 lowercase"><br>
+                          <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('pattern','password')">"Password is Required</span>
+                        </div>
+                        
+                        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary" style="text-align: center;margin-left: 40%;">Login</button>
+                      </form>
+                    <a style="color: white; margin-top: 10px;margin-left: 25%;" routerLink="/rcustomer" > New User? Click to Signup</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="main">
+        
+        <div class="side">
+           <h3 style="text-decoration: underline; margin-bottom: 30%;">Customer Login Page</h3>
+           <p>
+               <a routerLink="/rcustomer">New User ? Register Here</a>
+              </p>
+        </div>
+    <div class="row">
+        <div class="sign-in">
+            <img src="assets/images/logo.jpg" width="55%" alt="login">
+        <div class="col-md-4 offset-md-4">
+            <form #customerform="ngForm" (ngSubmit)= "onSubmit(customerform)" class="sign-in-form">
+                <div class="mt-2" class="form-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" #email= "ngModel" name="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required class="form-control" [(ngModel)]="customer.email" placeholder="Email">
+                    <div class="text-danger" *ngIf= "email.dirty && email.errors">
+                        Email is Required
+                    </div>
+                </div>
+                <div class="mt-2" class="form-group">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" #password= "ngModel" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required class="form-control" [(ngModel)]="customer.password" title="Password should contain 1 special character,1 number,1 uppercase,1 lowercase" placeholder="Password">
+                    <div class="text-danger" *ngIf= "password.dirty && password.errors?.['required']">
+                        Password is required
+                    </div>
+                    <div class="text-danger" *ngIf= "password.dirty && password.errors?.['pattern']">
+                        Password should contain 1 special character,1 number,1 uppercase,1 lowercase
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button class="btn-secondary">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+</div> -->

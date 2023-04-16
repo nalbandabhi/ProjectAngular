@@ -1,0 +1,28 @@
+<h3 style="text-align: center;margin-bottom: 1%;">Approval List</h3>
+
+<div class="container">
+<table class="table table-bordered">
+  <thead>
+    <tr class="table-success">
+      <th scope="col">SNO</th>
+      <th scope="col">Account Number</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Payment Method</th>
+      <th scope="col">Description</th>
+      <th scope="col">Action-Accept</th>
+      <th scope="col">Action-Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of paydata">
+      <th scope="row">{{items.id}}</th>
+      <td>{{items.AccountNumber}}</td>
+      <td>{{items.PaymentAmount}}</td>
+      <td>{{items.PaymentMethod}}</td>
+      <td>{{items.Description}}</td>
+      <td><span (click)="accpttran(items.id)">Accept <i class="fa-regular fa-circle-check"></i></span></td>
+      <td><span (click)="deletepay(items.id)">Delete <i class="fa-solid fa-trash"></i></span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
