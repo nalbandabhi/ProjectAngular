@@ -8,6 +8,7 @@ import { PaymentService } from 'src/app/services/payment.service';
   styleUrls: ['./receiptbill.component.css']
 })
 export class ReceiptbillComponent implements OnInit{
+  today: number = Date.now();
   data: any;
   constructor(private router:ActivatedRoute,private service:PaymentService,private route:Router){}
   id:any;
@@ -25,6 +26,9 @@ export class ReceiptbillComponent implements OnInit{
   onClick(){
     // Navigate to /products page
     this.route.navigate(['/cdash']);
+  }
+  printPage() {
+    window.print();
   }
 
 }

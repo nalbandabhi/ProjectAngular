@@ -9,6 +9,8 @@ import { PaymentService } from 'src/app/services/payment.service';
   styleUrls: ['./acptreceipt.component.css']
 })
 export class AcptreceiptComponent implements OnInit{
+  today: number = Date.now();
+
 id:any;
 data: any;
   constructor(private router:ActivatedRoute, private http:HttpClient,private route:Router,private service:PaymentService){}
@@ -24,5 +26,7 @@ data: any;
     onClick(){
       this.route.navigate(['/afterlogin']);
     }
-
+    printPage() {
+      window.print();
+    }
 }

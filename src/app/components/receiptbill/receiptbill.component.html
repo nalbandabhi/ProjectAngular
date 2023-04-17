@@ -12,9 +12,12 @@
                   <p class="card-text"><b>Amount = </b>{{data.PaymentAmount}}</p>
                   <p class="card-text"><b>PaymentMethod =</b>{{data.PaymentMethod}}</p>
                   <p class="card-text"><b>Description  =</b>{{data.Description}}</p>
-
+                  <p><b>Date :</b> {{today | date:'medium'}}</p>
                 </div>
               </div>
         </div>
     </div>
+
 </div>
+
+<button (click)="printPage()" style="text-align: center;margin-left: 45%;margin-top: 5%;width: 10%;color: rgb(93, 114, 228);">Print Receipt</button>
