@@ -14,21 +14,34 @@ export class RcustomerComponent implements OnInit {
   constructor(private service: CustomerserviceService, private router:Router){}
 
   public customer=new Customer;
+  
 
   ngOnInit(): void {
 
   }
 
   onSubmit(form: NgForm){
-    if(form.valid){
-      this.service.addCustomer(this.customer).subscribe(data=>{
-        //console.log(data);
-        //alert('Contact created successfully')
-        this.router.navigateByUrl('/clogin');
-      })    
-    } else{
-      alert("Please fix the error");
+  //   if(form.valid){
+  //     this.service.addCustomer(this.customer).subscribe(data=>{
+  //       //console.log(data);
+  //       //alert('Contact created successfully')
+  //       this.router.navigateByUrl('/clogin');
+  //     })    
+  //   } else{
+  //     alert("Please fix the error");
       
-    }
+  //   }
+
+  if(form.valid){
+    this.service.addUserDetails(this.customer).subscribe(data=>{
+      console.log(data);
+    })
+    alert('usercreated');
+      this.router.navigateByUrl('/clogin');
+  }
+  else{
+    alert("Please fix the error");
   }
 }
+   }
+

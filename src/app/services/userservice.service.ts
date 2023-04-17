@@ -29,4 +29,16 @@ export class UserserviceService {
   updateUser(id,user){
     return this.http.put(`http://localhost:3000/user${id}`, user);
   }
+
+  //new apis
+
+  getUserDetails(): Observable<User>{
+    return this.http.get<User>('http://localhost:5051/getBiller');
+  }
+  addUserDetails(biller){
+    return this.http.post('http://localhost:5051/addBiller',biller);
+  }
+  getUserDetail(id):Observable<User>{
+    return this.http.get<User>('http://localhost:5051/getCustomer/${id}');
+  }
 }

@@ -7,7 +7,7 @@
             <form #userform="ngForm" (ngSubmit)= "onSubmit(userform)">
                 <div class="mt-2">
                     <i class="fa-solid fa-user"></i>&nbsp;&nbsp;
-                    <input type="text" #firstname= "ngModel" name="FirstName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.firstname" placeholder="First Name">
+                    <input type="text" #firstname= "ngModel" name="firstname" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.firstname" placeholder="First Name">
                     <div class="text-danger" *ngIf= "firstname.dirty && firstname.errors?.['required']">
                         FirstName is required
                     </div>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="mt-2">
                     <i class="fa-solid fa-user"></i>&nbsp;&nbsp;
-                    <input type="text" #lastname= "ngModel" name="LastName" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.lastname" placeholder="Last Name">
+                    <input type="text" #lastname= "ngModel" name="lastname" pattern="[a-zA-Z]{1,10}" required class="form-control" [(ngModel)]="user.lastname" placeholder="Last Name">
                     <div class="text-danger" *ngIf= "lastname.dirty && lastname.errors">
                         last Name is Required
                     </div>

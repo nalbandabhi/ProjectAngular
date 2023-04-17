@@ -1,8 +1,8 @@
 export class Customer{
-    public firstname: string;
-    public lastname: string;
-    public city: string;
-    public email: string;
-    public phone: string;
-    public password: string;
+    public firstname: any;
+    public lastname: any;
+    public city: any;
+    public email: any;
+    public phone: any;
+    public password: any;
 }

@@ -8,14 +8,14 @@
                 </div>
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input formControlName="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <label for="email" class="form-label">Email address</label>
+                          <input formControlName="email" pattern="[a-zA-z0-9._]+@[a-z0-9.]+.[a-z]{2,}$" required type="email" class="form-control" id="email" aria-describedby="emailHelp">
                           <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" >"Email Id is Required</span>
                           
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required type="password" class="form-control" id="exampleInputPassword1" title="Password should contain atleast 1 special character,1 number,1 uppercase,1 lowercase"><br>
+                          <label for="password" class="form-label">Password</label>
+                          <input formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required type="password" class="form-control" id="password" title="Password should contain atleast 1 special character,1 number,1 uppercase,1 lowercase"><br>
                           <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('pattern','password')">"Password is Required</span>
                         </div>
                         

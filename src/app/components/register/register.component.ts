@@ -20,15 +20,26 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    if(form.valid){
-      this.service.addUser(this.user).subscribe(data=>{
-        //console.log(data);
-        alert('Registered successfully')
-        this.router.navigateByUrl('/blogin');
-      })    
-    } else{
-      alert("Please fix the error");
+  //   if(form.valid){
+  //     this.service.addUser(this.user).subscribe(data=>{
+  //       //console.log(data);
+  //       alert('Registered successfully')
+  //       this.router.navigateByUrl('/blogin');
+  //     })    
+  //   } else{
+  //     alert("Please fix the error");
       
-    }
+  //   }
+  // }
+  if(form.valid){
+    this.service.addUserDetails(this.user).subscribe(data=>{
+      console.log(data);
+    })
+    alert('usercreated');
+      this.router.navigateByUrl('/blogin');
   }
+  else{
+    alert("Please fix the error");
+  }
+}
 }

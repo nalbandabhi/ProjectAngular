@@ -23,7 +23,7 @@ export class BloginComponent implements OnInit {
   }
 
  login(){
-  this.http.get<any>("http://localhost:3000/user")
+  this.http.get<any>("http://localhost:5051/getBiller")
   .subscribe(res=>{
     const user = res.find((a:any)=>{
       return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password

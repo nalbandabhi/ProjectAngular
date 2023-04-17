@@ -6,6 +6,13 @@
       "PaymentMethod": "Bill recharge",
       "Description": "recharge",
       "id": 1
+    },
+    {
+      "AccountNumber": 8098,
+      "PaymentAmount": 900,
+      "PaymentMethod": "Debit card",
+      "Description": "billcard",
+      "id": 2
     }
   ]
 }
