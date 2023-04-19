@@ -24,12 +24,16 @@ export class CustomerComponent implements OnInit {
     })
   }
 
-  onDelete(id){
-    this.service.removeCustomer(id).subscribe(data=>{
-      this.getCustomer();
-    })
-  }
-
+  // onDelete(id){
+  //   this.service.removeCustomer(id).subscribe(data=>{
+  //     this.getCustomer();
+  //   })
+  // }
+onDelete(email){
+  this.service.deletecustomer(email).subscribe(data=>{
+    this.getCustomer();
+  })
+}
   onUpdate(id){
     console.log(id);
   }

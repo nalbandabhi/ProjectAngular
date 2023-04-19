@@ -1,18 +1,18 @@
 {
   "posts": [
     {
-      "AccountNumber": "12237489",
-      "PaymentAmount": 12000,
-      "PaymentMethod": "Bill recharge",
-      "Description": "recharge",
-      "id": 1
-    },
-    {
       "AccountNumber": 8098,
       "PaymentAmount": 900,
       "PaymentMethod": "Debit card",
       "Description": "billcard",
       "id": 2
+    },
+    {
+      "AccountNumber": 1233,
+      "PaymentAmount": 2333,
+      "PaymentMethod": "UPI",
+      "Description": "Recharge",
+      "id": 3
     }
   ]
 }

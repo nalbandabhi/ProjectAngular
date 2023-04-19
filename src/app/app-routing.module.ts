@@ -17,6 +17,9 @@ import { BillpageComponent } from './components/billpage/billpage.component';
 import { CdashComponent } from './components/cdash/cdash.component';
 import { ReceiptbillComponent } from './components/receiptbill/receiptbill.component';
 import { AcptreceiptComponent } from './components/acptreceipt/acptreceipt.component';
+import { BalanceComponent } from './components/balance/balance.component';
+import { BillerbalanceComponent } from './components/billerbalance/billerbalance.component';
+import { BalancecusComponent } from './components/balancecus/balancecus.component';
 
 
 
@@ -37,6 +40,9 @@ const routes: Routes = [
   {path:'cdash',component:CdashComponent},
   {path:'receiptbill/:id',component:ReceiptbillComponent},
   {path:'acptreceipt/:id',component:AcptreceiptComponent},
+  {path:'balance',component:BalanceComponent},
+  {path:'billerbalance',component:BillerbalanceComponent},
+  {path:'balancecus',component:BalancecusComponent},
   {path:'**', component:NotfoundComponent }
 
 ];

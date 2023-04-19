@@ -21,7 +21,7 @@ export class CdashComponent {
     alert("Logging out!!");
     this.router.navigate(['/']);
   }
-  // onreClick(){
-  //   this.router.navigate(['/acptreceipt']);
-  // }
+  onreClick(){
+    this.router.navigate(['/balance']);
+  }
 }

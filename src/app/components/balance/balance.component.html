@@ -1,0 +1,44 @@
+<h3 style="text-align: center;">Balance Page</h3>
+<button type="submit"  class="btn btn-secondary" style="margin-left: 86%;margin-top: .9%;" (click)="oncusClick()">My Balance</button>
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <form #customerbalform="ngForm" (ngSubmit)= "onSubmit(customerbalform)">
+            <div class="mt-2">
+                &nbsp;&nbsp;<i class="fa-solid fa-building-columns" style="color: #3074e8;"></i>&nbsp;&nbsp;
+                <input type="text" #accno= "ngModel" name="accno" pattern="[0-9]{1,10}" required class="form-control" [(ngModel)]="balance.accno" placeholder="Accountno">
+                <div class="text-danger" *ngIf= "accno.dirty && accno.errors?.['required']">
+                    Accountno is required
+                </div>
+                <div class="text-danger" *ngIf= "accno.dirty && accno.errors?.['pattern']">
+                    Acountno is required
+                </div>
+            </div>
+            <div class="mt-2">
+                &nbsp;&nbsp;<i class="fa-light fa-sack-dollar"></i>&nbsp;&nbsp;
+                <input type="text" #amount= "ngModel" name="amount" pattern="[0-9]{1,10}" required class="form-control" [(ngModel)]="balance.amount" placeholder="Amount">
+                <div class="text-danger" *ngIf= "amount.dirty && amount.errors">
+                    Amount is Required
+                </div>
+                <div class="text-danger" *ngIf= "amount.dirty && amount.errors?.['pattern']">
+                    Amount is required
+                </div>
+            </div>
+            <div class="mt-2">
+                &nbsp;&nbsp;<i class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;
+                <input type="text" #phone= "ngModel" name="phone" pattern="[0-9]{7,10}" required class="form-control" [(ngModel)]="balance.phone" placeholder="phone">
+                <div class="text-danger" *ngIf= "phone.dirty && phone.errors">
+                    Phone no is Required
+                </div>
+                <div class="text-danger" *ngIf= "phone.dirty && phone.errors?.['pattern']">
+                    Phone no is required
+                </div>
+            </div>
+            <div class="mt-2">
+                <button class="btn-secondary" style="width: 30%;color: rgb(16, 16, 15);margin-left: 35%;">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

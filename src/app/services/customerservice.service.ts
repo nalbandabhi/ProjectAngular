@@ -40,5 +40,8 @@ export class CustomerserviceService {
   getUserDetail(id):Observable<Customer>{
     return this.http.get<Customer>('http://localhost:5051/getCustomer/${id}');
   }
+  deletecustomer(email){
+    return this.http.delete(`http://localhost:5051/getCustomer/${email}`)
+  }
 
 }

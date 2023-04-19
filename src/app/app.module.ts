@@ -24,6 +24,10 @@ import { BillpageComponent } from './components/billpage/billpage.component';
 import { CdashComponent } from './components/cdash/cdash.component';
 import { ReceiptbillComponent } from './components/receiptbill/receiptbill.component';
 import { AcptreceiptComponent } from './components/acptreceipt/acptreceipt.component';
+import { BalanceComponent } from './components/balance/balance.component';
+import { BillerbalanceComponent } from './components/billerbalance/billerbalance.component';
+import { CusbalanceComponent } from './components/cusbalance/cusbalance.component';
+import { BalancecusComponent } from './components/balancecus/balancecus.component';
 
 
 
@@ -48,7 +52,11 @@ import { AcptreceiptComponent } from './components/acptreceipt/acptreceipt.compo
     BillpageComponent,
     CdashComponent,
     ReceiptbillComponent,
-    AcptreceiptComponent
+    AcptreceiptComponent,
+    BalanceComponent,
+    BillerbalanceComponent,
+    CusbalanceComponent,
+    BalancecusComponent
 
   ],
   imports: [
