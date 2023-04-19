@@ -25,15 +25,24 @@
   <thead>
     <tr class="table-primary">
       <th scope="col">SNO</th>
+      <th scope="col">Account No</th>
+      <th scope="col">Amount</th>
       <th scope="col">Payment Method</th>
+      <th scope="col">Description</th>
       <th scope="col">Action</th>
+      <th scope="col">DATE</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of paymentdata">
       <th scope="row">{{item.id}}</th>
-      <td>{{item.PaymentMethod}}</td>
+      <th scope="row">{{item.AccountNumber}}</th>
+      <th scope="row">{{item.PaymentAmount}}</th>
+      <td scope="row">{{item.PaymentMethod}}</td>
+      <td scope="row">{{item.Description}}</td>
+      
       <td><span (click)="navi(item.id)">Receipt <i class="fa-sharp fa-solid fa-receipt"></i></span></td>
+      <td >{{today | date:'medium'}}</td> 
     </tr>
   </tbody>
 </table>

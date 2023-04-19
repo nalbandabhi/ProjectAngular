@@ -9,6 +9,7 @@ import { PaymentService } from 'src/app/services/payment.service';
 })
 export class PaymentsentComponent implements OnInit{
   constructor(private service:PaymentService,private router:Router){}
+  today: number = Date.now();
   paymentdata:any=[];
   ngOnInit(): void {
     this.service.getallPayment().subscribe((data)=>
